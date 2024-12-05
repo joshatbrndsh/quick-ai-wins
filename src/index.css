@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hand-drawn {
+  animation: sketch 1s ease-out forwards;
+}
+
+.hand-drawn-arrows path {
+  animation: sketch 1s ease-out forwards;
+  animation-delay: calc(var(--index, 0) * 0.2s);
+}
+
+@keyframes sketch {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hand-drawn,
+.hand-drawn-arrows path {
+  stroke-dasharray: 1000;
+}
